@@ -1,0 +1,27 @@
+Learning Outcome: After completing this assignment you will be able to preprocess your documents
+before performing IR tasks and also create inverted index.
+1 Problem description
+
+Data preprocessing is an essential step for building robust and reliable machine learning models. In IR, prepro-
+cessing consists of a pipeline which converts the corpus into a format that allows a model to efficiently solve a
+
+given task.
+2 Implemetation
+2.1 Dataset
+• We will use Huggingface ILSUM English train dataset.
+• To install the dataset: pip install dataset
+• Follow the steps mentioned in the link to access the Article field of the dataset.
+2.2 Exercise
+1. Perform tokenization on a single article. [2 marks]
+(a) Use word tokenize of NLTK library to tokenize the words and display the tokens.
+(b) Use tiktoken to tokenize, display the subword tokens.
+2. Convert the text to lowercase of a single article. [1 mark]
+3. Remove stop-words from the text of a single article and display the words. [1 mark]
+4. Perform stemming using Porter stemmer of the words of a single article and display the words. [1 mark]
+5. Preprocess the Article fields of all the train data and then create Inverted Index. Display the inverted the
+index for a few words. [5 mark]
+3 References
+• NLTK documentation: https://www.nltk.org/
+• https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html
+• https://www.projectpro.io/recipes/use-porter-stemmer
+• Tiktoken: https://pypi.org/project/tiktoken/
