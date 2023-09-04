@@ -1,0 +1,42 @@
+Learning Outcome: After this assignment you will learn how to implement a retrieval module using
+PyTerrier and also how to evaluate it.
+1 Problem description
+In document retrieval the documents and queries are converted to vector space and then some matching is done
+between the documents and queries. Which returns a ranked list of documents. Then evaluation is performed
+to determine the efficiency the matching function.
+2 Implementation
+2.1 Dataset
+• For this assignment we will use Gujarat Samachar news articles, which is in XML format. It contains news
+on different categories for the year 2004 to 2010. You can download the dataset from this link: Dataset
+Click
+• The Queries are in ”gu.topics.176-225.2012”. The query is of the format shown in Figure 1. Use the
+sentences enclosed in desc tag for framing your query vector
+• The ”gu.qrels.176-225.2012-v1.txt” contains the documents that are relevant to a query. The format of a
+qrel is such: Query No Q0 Document ID Relevance score.
+• Relevance score is binary 0 or 1. 1 is for relevant, 0 is for otherwise.
+• The documents in the dataset is in the format shown in Figure 2.
+
+Figure 1: Query Format
+
+Figure 2: News Format
+
+1
+
+2.2 Exercise
+1. Read the files using BeautifulSoup library, perform preprocessing (stemming, normalize, tokenize) using
+Indic NLP library [1 marks]
+2. Index the documents using TF-IDF. [4 marks]
+3. Use the text in <title> in the queries convert to TF-IDF [2 marks]
+4. Perform retrieval and perform evaluation using: [3 marks]
+• Mean Average Precision (MAP)
+• Precision@10
+• BPREF
+
+3 References
+• An Introduction to Information Retrieval: Christopher D.Manning ,Prabhakar Raghavan, Hinrich Sch ̈utze
+• https://pyterrier.readthedocs.io/en/latest/installation.html
+• https://github.com/anoopkunchukuttan/indic_nlp_library
+4 Submission
+• You have to submit your assignment in Google Classroom with proper comments and explanation of your
+approach.
+• The submission deadline for this assignment is 31st August 2023, 11:59 PM
